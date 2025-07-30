@@ -14,11 +14,11 @@
 
 * Policy : tells the agent what action to take at a state
 
-  `using Mathematical representation(conditional probability) to describe policy`
+  `using Mathematical representation(conditional probability) to describe policy(deterministic or stochastic)`
 
   ![The icon](D:\ZJUWORK\reinforcement_learning\reinforcement_learning\printscreen\C1\conditional possibility.png)
 
-* 
+* Reward :
 
 
 
