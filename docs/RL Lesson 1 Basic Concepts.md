@@ -8,15 +8,15 @@
 
 * Action space : The set of all possible actions in a state
 
-  `different states have different action space`
+> different states have different action space
 
 * Deterministic or Stochastic state transition : states connected by action
 
 * Policy : tells the agent what action to take at a state
 
-  `using Mathematical representation(conditional probability) to describe policy(deterministic or stochastic)`
+> using Mathematical representation(conditional probability) to describe policy(deterministic or stochastic)
 
-  ![The icon](D:\ZJUWORK\reinforcement_learning\reinforcement_learning\printscreen\C1\conditional possibility.png)
+![The icon](D:\ZJUWORK\reinforcement_learning\reinforcement_learning\printscreen\C1\conditional possibility.png)
 
 * Reward : encouragement or punishment received by taking actions
 
