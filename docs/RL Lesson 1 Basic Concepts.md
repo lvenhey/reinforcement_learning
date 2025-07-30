@@ -18,17 +18,24 @@
 
   ![The icon](D:\ZJUWORK\reinforcement_learning\reinforcement_learning\printscreen\C1\conditional possibility.png)
 
-* Reward :
+* Reward : encouragement or punishment received by taking actions
 
+> Reward can be deterministic or stochastic
 
+* Trajectory : A state-action-reward chain
+* Return of Trajectory :  The sum of reward!
+*  Discounted return : introduce a discount rate to balance the reward in the near future and far future.
 
+![Discounted return](D:\ZJUWORK\reinforcement_learning\reinforcement_learning\printscreen\C1\discounted return.png)
 
+___
 
+### Key Elements of MDP(Markov decision process)
 
+![Elements](D:\ZJUWORK\reinforcement_learning\reinforcement_learning\printscreen\C1\MDP elements.png)
 
-
-
-
+> Markov decision process becomes the Markov process once the policy is given!
+>
 
 
 
