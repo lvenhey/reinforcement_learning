@@ -16,7 +16,7 @@
 
   `using Mathematical representation(conditional probability) to describe policy`
 
-  ![The icon](printscreen\C1\conditional possibility.png)
+  ![The icon](D:\ZJUWORK\reinforcement_learning\reinforcement_learning\printscreen\C1\conditional possibility.png)
 
 * 
 
