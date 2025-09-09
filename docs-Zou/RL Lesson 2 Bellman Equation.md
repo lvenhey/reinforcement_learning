@@ -104,7 +104,7 @@ $$
 #### so it can also be written like:
 
 $$
-G_T=R_{t+1} +\gamma G_{t+1}
+G_T=R_{t+1} +\gamma G_{t+1}     -------(1)
 $$
 
 
@@ -119,7 +119,7 @@ $$
 v_\pi(s)=E[G_t|S_t=s]
 $$
 
-The state value can also represented as : 
+The state value can also represented as the following according to formula (1) : 
 $$
 v_\pi (s) = E[R_{t+1}|S_t=s]+\gamma E[G_{t+1}|S_t=s]\\
 =\sum_a \pi(a|s) \sum_r p(r|s,a)r + \sum_{s^{'}} E[G_{t+1}|S_t=s,S_{t+1}=s^{'}]p(s^{'}|s)
@@ -130,6 +130,57 @@ $$
 
 makes sense due to the memoryless Markov  property.
 
+-----
+
+### 3、 The Bellman Equation
+
+Write out the Bellman Equation according to the general expression
+$$
+v_\pi(s)=\sum_a \pi(a|s)[\sum_rp(r|s,a)r+\gamma \sum_{s'} p(s^{'}|s,a)v_\pi(s^{'})]------(2)
+$$
+
+#### Redefinition 
+
+![Matrix](D:\ZJUWORK\reinforcement_learning\reinforcement_learning\printscreen\C2\Matrix-vector form of the Bellman Equation.png)
+
+so we can write out the matrix form of Bellman Equation:
+$$
+v_\pi = r_\pi + \gamma P_\pi v_\pi
+$$
+Why to solve state values?
+
+* Given a policy, finding out the corresponding state values is called policy evaluation! It is fundamental problem in RL. It is the foundation to find better policies.
+
+#### The closed formed solution
+
+$$
+v_\pi(s)= (I-\gamma P_\pi)^{-1}r_\pi
+$$
+
+_____
+
+### 4、 Action value
+
+Definition:
+$$
+q_\pi(s,a) = E[G_t|S_t=s,A_t=a]
+$$
+
+* $$q_\pi(s,a)$$ is a function of the state-action pair (s,a)
+* $$q_\pi(s,a)$$ depends on $$\pi$$
+
+From the properties of conditional expectation:
+$$
+E[G_t|S_t=s]=\sum_a E[G_t|S_t=s,A_t=a]\pi(a|s)
+$$
+Hence,
+$$
+v_\pi(s)=\sum_a \pi(a|s)q_\pi(s,a)-----(3)
+$$
+Then according to formula (2),we could be pleasantly surprised to find that:
+$$
+q_\pi(s,a) = \sum_rp(r|s,a)r+\gamma \sum_{s'} p(s^{'}|s,a)v_\pi(s^{'})----(4)
+$$
 
 
 
