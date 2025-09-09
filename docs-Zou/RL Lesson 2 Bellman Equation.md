@@ -166,7 +166,6 @@ Why to solve state values?
 
 $$
 v_\pi(s)= (I-\gamma P_\pi)^{-1}r_\pi
-
 $$
 
 _____
@@ -199,6 +198,7 @@ Then according to formula (2),we could be pleasantly surprised to find that:
 $$
 q_\pi(s,a) = \sum_rp(r|s,a)r+\gamma \sum_{s'} p(s^{'}|s,a)v_\pi(s^{'})----(4)
 $$
+
 
 
 
