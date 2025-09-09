@@ -150,7 +150,7 @@ $$
 
 #### Redefinition 
 
-![Matrix](printscreen\C2\Matrix-vector form of the Bellman Equation.png)
+![Matrix](printscreen\C2\Matrix_vector_form_of_the_BellmanEquation.png)
 
 so we can write out the matrix form of Bellman Equation:
 
