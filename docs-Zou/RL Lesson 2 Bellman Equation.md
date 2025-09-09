@@ -150,7 +150,7 @@ $$
 
 #### Redefinition 
 
-![Matrix](D:\ZJUWORK\reinforcement_learning\reinforcement_learning\printscreen\C2\Matrix-vector form of the Bellman Equation.png)
+![Matrix](printscreen\C2\Matrix-vector form of the Bellman Equation.png)
 
 so we can write out the matrix form of Bellman Equation:
 
@@ -198,6 +198,7 @@ Then according to formula (2),we could be pleasantly surprised to find that:
 $$
 q_\pi(s,a) = \sum_rp(r|s,a)r+\gamma \sum_{s'} p(s^{'}|s,a)v_\pi(s^{'})----(4)
 $$
+
 
 
 
