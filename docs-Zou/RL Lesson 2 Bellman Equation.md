@@ -174,6 +174,7 @@ _____
 ### 4、 Action value
 
 Definition:
+
 $$
 q_\pi(s,a) = E[G_t|S_t=s,A_t=a]
 $$
@@ -182,17 +183,23 @@ $$
 * $$q_\pi(s,a)$$ depends on $$\pi$$
 
 From the properties of conditional expectation:
+
 $$
 E[G_t|S_t=s]=\sum_a E[G_t|S_t=s,A_t=a]\pi(a|s)
 $$
+
 Hence,
+
 $$
 v_\pi(s)=\sum_a \pi(a|s)q_\pi(s,a)-----(3)
 $$
+
 Then according to formula (2),we could be pleasantly surprised to find that:
+
 $$
 q_\pi(s,a) = \sum_rp(r|s,a)r+\gamma \sum_{s'} p(s^{'}|s,a)v_\pi(s^{'})----(4)
 $$
+
 
 
 
