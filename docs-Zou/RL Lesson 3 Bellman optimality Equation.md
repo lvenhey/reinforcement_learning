@@ -86,14 +86,14 @@ $$
 v^* \ge v_\pi , \forall \pi
 $$
 
-What does an optimal policy $\pi^*$ look like ? 
+What does an optimal policy $\pi^*$ look like ?  
 
 $$
 \pi^*(a|s) = \begin{cases}
  1\quad a = a^*(s)\\
  0\quad a \ne a^*(s)
  \end{cases}           ------------(1)
-$$
+$$ 
 what is $a^*(s)$? 
 
 $$
