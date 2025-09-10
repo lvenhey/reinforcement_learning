@@ -47,15 +47,19 @@ If $f$ is a contraction mapping, then:
 #### BOE Solution 
 
 For, 
+
 $$
 v=f(v)=max_\pi(r_\pi+\gamma P\pi v)
 $$
+
 there alway exists a solution v<sup>*</sup> and the solution is unique.
 
 The solution could be solved iteratively by: 
+
 $$
 v_{k+1} = f(v_k) = \max_\pi(r_\pi+\gamma P_\pi v_k)
 $$
+
 This sequence {$v_k$} converges to v* exponentially fast given ant initial guess v<sub>0</sub> . And the convergence rate is determined by $\gamma$ .
 
 #### Policy optimality 
@@ -63,47 +67,63 @@ This sequence {$v_k$} converges to v* exponentially fast given ant initial guess
 Then back to our discussion about solving BOE, when we get the v* according to the contraction mapping theorem, we fix the v* and to figure out the $\pi^*$ 
 
 Suppose: 
+
 $$
 \pi^* = arg \max_\pi (r_\pi +\gamma P_\pi v^*)
 $$
+
 So we ultimately get a special Bellman equation: 
+
 $$
 v^* = r_{\pi^*}+\gamma P_{\pi^*}v^*
 $$
+
 And we can correspondingly solve out the $v^*$= $v_{\pi ^*}$  , which is the corresponding state value.
 
 It can be proved that $\pi^*$ is the optimal policy: 
+
 $$
 v^* \ge v_\pi , \forall \pi
 $$
+
 What does an optimal policy $\pi^*$ look like ? 
+
 $$
 \pi^*(a|s) = \begin{cases}
  1\quad a = a^*(s)\\
  0\quad a \ne a^*(s)
  \end{cases}           ------------(1)
 $$
+
 what is $a^*(s)$? 
+
 $$
 a^*(s) = arg \max_a q^*(a,s)
 $$
+
 **Takes the action that can yield the most action value!**
 
 **WHY?**
 
 Once we figure out the $v^*$ according to the Contraction mapping theorem, we could easily calculate the action value according to the former formula: 
+
 $$
 q_\pi(s,a) = \sum_rp(r|s,a)r+\gamma \sum_{s'} p(s^{'}|s,a)v_\pi(s^{'})
 $$
+
 which can be rewritten like: 
+
 $$
 q^*(s,a) = \sum_rp(r|s,a)r+\gamma \sum_{s'} p(s^{'}|s,a)v^*(s^{'})
 $$
+
 **How to prove formula (1)?**
 
 1、We know that: 
+
 $$
 \pi^* = arg \max_\pi (r_\pi +\gamma P_\pi v^*)\\=arg \max_\pi(v^*)\\=arg \max_\pi\sum_a \pi(a|s)[\sum_rp(r|s,a)r+\gamma \sum_{s'} p(s^{'}|s,a)v^*(s^{'})]\\=arg \max_\pi\sum_a \pi(a|s)q^*(s,a)
 $$
+
 2、To get the deterministic greedy policy, we should choose the deterministic action that owns largest $q^*(s,a)$, so we proved formula (1). 
 
