@@ -94,7 +94,6 @@ $$
  0\quad a \ne a^*(s)
  \end{cases}           ------------(1)
 $$
-
 what is $a^*(s)$? 
 
 $$
