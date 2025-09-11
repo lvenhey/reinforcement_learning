@@ -5,23 +5,27 @@
 With strong connection to RL Lesson 3, and according to the contraction mapping theorem, we use Value Iteration algorithm to solve the BOE to find the optimal policy and optimal state value. 
 
 Looking back into the RL Lesson 3, what is the value iteration algorithm? 
+
 $$
 v_{k+1} = f (v_k) = \max_\pi (r_\pi+\gamma P_\pi v_k), \quad \quad k=1,2,3,...
 $$
+
 It can be decomposed to two steps:
 
 * Step 1: policy update
 
-  $$
-  \pi_{k+1} = =arg \max_\pi(r_\pi+ \gamma P_\pi v_k) \quad---(1)
-  $$
+$$
+\pi_{k+1} = =arg \max_\pi(r_\pi+ \gamma P_\pi v_k) \quad---(1)
+$$
+  
   where $v_k$ is given.
 
 * Step 2: value update
 
-  $$
-  v_{k+1} = r_{\pi_{k+1}} + \gamma P_{\pi_{k+1}}v_k\quad\quad  ----(2)
-  $$
+$$
+v_{k+1} = r_{\pi_{k+1}} + \gamma P_{\pi_{k+1}}v_k\quad\quad  ----(2)
+$$
+  
   note that $v_k$ is not a state value, as it is not ensured that $v_k$ satisfies a Bellman equation.
 
 _____
@@ -85,17 +89,17 @@ Given a random initial policy $\pi_0$
 
   Calculate the state value of  $\pi_k$  (The Bellman Equation)
 
-  $$
-  v_{\pi_k} = r_{\pi_k} + \gamma P_{\pi_k} v_{\pi_k}
-  $$
+$$
+v_{\pi_k} = r_{\pi_k} + \gamma P_{\pi_k} v_{\pi_k}
+$$
 
 * Step 2: policy improvement (PI)
 
   According to BOE, 
 
-  $$
-  \pi_{k+1} = =arg \max_\pi(r_\pi+ \gamma P_\pi v_k)
-  $$
+$$
+\pi_{k+1} = =arg \max_\pi(r_\pi+ \gamma P_\pi v_k)
+$$
 
 ____
 
@@ -105,15 +109,15 @@ ____
 
    * Closed-form solution:
 
-     $$
-     v_{\pi_k} = (I-\gamma P_{\pi_k})^{-1} r_{\pi_k}
-     $$
+ $$
+ v_{\pi_k} = (I-\gamma P_{\pi_k})^{-1} r_{\pi_k}
+ $$
 
    * Iterative solution:
 
-     $$
-     v_{\pi_k}^{(j+1)} = r_{\pi_k} + \gamma P_{\pi_k}v_{\pi_k}^{(j)}, \quad j=0,1,2,...
-     $$
+ $$
+ v_{\pi_k}^{(j+1)} = r_{\pi_k} + \gamma P_{\pi_k}v_{\pi_k}^{(j)}, \quad j=0,1,2,...
+ $$
 
 2. It can be proved that the new policy $\pi_{k+1}$ is better than $\pi_k$ and such an iterative algorithm finally reach an optimal policy!
 
