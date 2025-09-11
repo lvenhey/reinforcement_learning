@@ -17,7 +17,7 @@ It can be decomposed to two steps:
 $$
 \pi_{k+1} = =arg \max_\pi(r_\pi+ \gamma P_\pi v_k) \quad---(1)
 $$
-  
+
   where $v_k$ is given.
 
 * Step 2: value update
@@ -25,7 +25,7 @@ $$
 $$
 v_{k+1} = r_{\pi_{k+1}} + \gamma P_{\pi_{k+1}}v_k\quad\quad  ----(2)
 $$
-  
+
   note that $v_k$ is not a state value, as it is not ensured that $v_k$ satisfies a Bellman equation.
 
 _____
@@ -109,15 +109,15 @@ ____
 
    * Closed-form solution:
 
- $$
+$$
  v_{\pi_k} = (I-\gamma P_{\pi_k})^{-1} r_{\pi_k}
- $$
+$$
 
    * Iterative solution:
 
- $$
+$$
  v_{\pi_k}^{(j+1)} = r_{\pi_k} + \gamma P_{\pi_k}v_{\pi_k}^{(j)}, \quad j=0,1,2,...
- $$
+$$
 
 2. It can be proved that the new policy $\pi_{k+1}$ is better than $\pi_k$ and such an iterative algorithm finally reach an optimal policy!
 
@@ -156,3 +156,26 @@ $$
 
 ____
 
+### 3、 Truncated Policy Iteration algorithm
+
+ To put it in a simple way, Value Iteration algorithm and Policy Iteration algorithm are two extreme cases of Truncated Policy Iteration algorithm.
+
+And It's quite easy to understand this in-the-middle algorithm since we understand the true difference between value-iteration and policy-iteration.
+
+![Truncated](printscreen/C4/Truncated_iteration_algorithm.png)
+
+Using the nested iteration algorithm, the value iteration immediately uses the v1 in the next policy update step, while the policy iteration complete the whole nested iteration algorithm getting the $v_{\pi_1}$ corresponding to $\pi_1$ .
+
+____
+
+#### Graph of Truncated policy iteration
+
+![graph](printscreen\C4\graph_of_truncated.png)
+
+which means this algorithm does not complete the whole nested iteration algorithm that solves Bellman Equation. It just do $j_truncated$ times iteration and get  the $\overline v$ to update new policy.
+
+______
+
+#### Intuitive Graph
+
+![graph](printscreen\C4\Intuative_Graph.png)
