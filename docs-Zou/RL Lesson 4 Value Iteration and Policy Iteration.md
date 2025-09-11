@@ -170,7 +170,7 @@ ____
 
 #### Graph of Truncated policy iteration
 
-![graph](printscreen\C4\graph_of_truncated.png)
+![graph](printscreen/C4/graph_of_truncated.png)
 
 which means this algorithm does not complete the whole nested iteration algorithm that solves Bellman Equation. It just do $j_truncated$ times iteration and get  the $\overline v$ to update new policy.
 
@@ -178,4 +178,4 @@ ______
 
 #### Intuitive Graph
 
-![graph](printscreen\C4\Intuative_Graph.png)
+![graph](printscreen/C4/Intuative_Graph.png)
