@@ -107,13 +107,13 @@ ____
 
 1. In the PE step, how to get the state value $v_{\pi_k}$ by solving the Bellman Equation?
 
-   * Closed-form solution:
+ * Closed-form solution:
 
 $$
  v_{\pi_k} = (I-\gamma P_{\pi_k})^{-1} r_{\pi_k}
 $$
 
-   * Iterative solution:
+ * Iterative solution:
 
 $$
  v_{\pi_k}^{(j+1)} = r_{\pi_k} + \gamma P_{\pi_k}v_{\pi_k}^{(j)}, \quad j=0,1,2,...
