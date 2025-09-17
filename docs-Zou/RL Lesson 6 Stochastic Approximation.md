@@ -7,9 +7,11 @@ SA refers to broad class of stochastic iterative algorithms solving root finding
 Q: How do we calculate the mean value of expectation?
 
 A: We use the incremental and iterative manner to calculates the average value.
+
 $$
 w_{k+1} = w_k - \frac{1}{k}(w_k-x_k)
 $$
+
 **k** represents discrete-time series.
 
 Attention that the mean estimate is not accurate in the beginning due to insufficient samples.
@@ -21,14 +23,17 @@ _____
 #### Before the algorithm
 
 Suppose $J(w)$  is  an objective function to be minimized. Then the optimization problem  can be converged to:
+
 $$
 g(w) = \nabla_w J(w) = 0
 $$
+
 It becomes a sufficient condition when $J(w)$ only has one extremum(极点).
 
 #### PS What is the $\nabla$ ?
 
 It's a vector showing the changing rate of one function.
+
 $$
 (\frac{\partial f}{\partial x},\frac{\partial f}{\partial y})
 $$
@@ -40,6 +45,7 @@ ____
 The algorithm to solve this kind problem $g(w) = \nabla_w J(w) = 0$ .
 
 And the **algorithm** is  more abstractly like,
+
 $$
 \omega_{k+1} = \omega_k -\alpha_k \tilde{g}(\omega_k,\eta_k), \quad k=1,2,3,....
 $$
@@ -66,16 +72,18 @@ ____
 
 ​	The second one prevents that initial guess $\omega_1$ can be chosen arbitrarily far away from the root $\omega^{ *}$ .
 
-* $E[\eta_k | H_k]= 0$ and $E[\eta_k^2 | H_k] < \infty$ where $H_k = \left\{\omega_k ,\omega_{k-1} \right\}$ 
+* $E[\eta_k | H_k]= 0$ and $E[\eta_k^2 | H_k] < \infty$ where $H_k = {{} \omega_k ,\omega_{k-1} {}}$ 
 
 _____
 
 #### Application to mean estimation
 
 Recall that,
+
 $$
 \omega_{k+1} = \omega_k + \alpha_k (x_k - \omega_k)
 $$
+
 How to prove $\omega_k$ converges to $E[X]$ with $\alpha_k$ unknown?
 
 1. Let 
@@ -113,6 +121,7 @@ $$
 #### Problem statement
 
 We aim to solve the following optimization problem:
+
 $$
 \min_{\omega} J(\omega) = E[f(\omega,X)]
 $$
@@ -128,6 +137,7 @@ ____
 * GD(gradient descent)
 
 Before SGD, GD should firstly be introduced:
+
 $$
 \omega_{k+1} = \omega_k - \alpha_k \nabla_{\omega}E[f(\omega_k,X)]\\=\omega_k - \alpha_k E[\nabla_{\omega} f(\omega_k,X)]
 $$
