@@ -56,6 +56,8 @@ where
 * $\tilde{g}(\omega_k,\eta_k) = g(\omega_k) + \eta_k$ is the kth noisy observation
 * $\alpha_k$ is a positive coefficient.
 
+The algorithm based on the data $\omega_k$ and the **noisy observation** !
+
 After sufficient many times iteration, the $\omega$ eventually converges to the $\omega^{ *}$, which should be the root to the equation $g(w) = \nabla_w J(w) = 0$ .
 
 ____

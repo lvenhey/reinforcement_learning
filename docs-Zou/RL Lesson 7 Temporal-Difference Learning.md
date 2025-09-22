@@ -47,7 +47,35 @@ This TD algorithm only estimates the state value of a given policy and can not e
 
 #### What does this TD algorithm do mathematically?
 
-It solves the Bellman Equation of a given policy $\pi$
+It solves the Bellman Equation of a given policy $\pi$ without a model !
 
 _____
+
+#### The Bellman expectation equation
+
+$$
+v_{\pi}(s) = E[R+\gamma v_{\pi}(S')|S=s] , s \in S
+$$
+
+It's an important tool to design and analyze TD algorithms.
+
+To solve the Bellman Equation in using the RM algorithm, we define:
+$$
+g(v(s)) = v(s) - E[R+\gamma v_{\pi}(S')|S=s]
+$$
+let it be,
+$$
+g(v(s)) = 0
+$$
+then we can only obtain the samples r and s' of R and S', the noisy observation of RM we have should be:
+$$
+\tilde {g(v(s))} = v(s) - [r + \gamma v_{\pi}(s')]
+$$
+Then, the RM algorithm,
+
+![pic](printscreen/C7/TD_algorithm.png)
+
+_____
+
+
 
