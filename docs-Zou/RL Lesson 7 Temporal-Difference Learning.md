@@ -81,7 +81,7 @@ The core task in RL is to find the optimal policies. Nearly all the algorithms a
 So Usually we use the policy iteration method, which includes two parts, namely the policy evaluation and policy improvement.
 
 Depart from this principle, we could easily understand what all these algorithms do! 
-* TD algorithm provides an equation to iteratively calculate the estimation of state value torwards the true state value under policy $\pi$ 
-And we all know the policy evaluation is exactly aiming to calculate the state value of current policy $\pi$. So TD is used in the policy evaluation part!
-* Review: as for policy evaluation part, what we are goint to do in this part? 
+* TD algorithm provides an equation to iteratively calculate the estimation of state value torwards the true state value under policy $\pi$ . And we all know the policy evaluation is exactly aiming to calculate the state value of current policy $\pi$ (derived from RM algorithm). So TD is used in the policy evaluation part!
+* Review: as for policy evaluation part, what we are goint to do in this part? once we got the current state value with current policy,we could upadte the policy!
+  
 
