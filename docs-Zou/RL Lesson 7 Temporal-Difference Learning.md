@@ -83,5 +83,11 @@ So Usually we use the policy iteration method, which includes two parts, namely 
 Depart from this principle, we could easily understand what all these algorithms do! 
 * TD algorithm provides an equation to iteratively calculate the estimation of state value torwards the true state value under policy $\pi$ . And we all know the policy evaluation is exactly aiming to calculate the state value of current policy $\pi$ (derived from RM algorithm). So TD is used in the policy evaluation part!
 * Review: as for policy evaluation part, what we are goint to do in this part? once we got the current state value with current policy,we could upadte the policy!
-  
 
+$$
+\pi_{k+1}(s) = arg \max_\pi \sum_a  \pi(a|s) \Bigg(\sum_r p(r|s,a)r+ \gamma \sum_{s^{'}} p(s^{'}|s,a)v_k(s^{'})\Bigg),\quad s \in S
+$$
+
+   Then we can clearly know what does Monte Carlo algorithm do? It could solve the policy improvement problem with a specfic model(model free). 
+ 
+ * Then it comes to the Sarsa algorithm? Similarily what does it do? This algorithm estimate the action value and iteratively converges to the real action value under the current given policy. Why doing this? Because it helps in the policy improvement part as we update the q(s,a) value online!!!
