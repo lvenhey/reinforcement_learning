@@ -105,3 +105,7 @@ $$
 q_{t+1}(s,a)=q_t(s,a), \forall (s,a) \ne (s_t,a_t)
 $$
 
+Q-learning is very similar to Sarsa. They are different only in terms of the TD target:
+* The TD target in Q-learning is $r_{t+1}+\gamma \max_{a \in A} q_t(s_{t+1},a)$
+* The Td TARGET IN Sarsa is $r_{t+1}+\gamma q_t(s_{t+1},a_{t+1})$
+
