@@ -98,7 +98,10 @@ ______
 The Q-learning algorithm is:
 
 $$
-q_{t+1}(s_t,a_t) = q_t(s_t,a_t)-\alpha_t(s_t,a_t) \Bigg[q_t(s_t,a_t)-[r_{t+1}+\gamma \max_{a \in A} q_t(s_{t+1},a)] \Bigg], \quad \forall (s,a) \ne (s_t,a_t) //
+q_{t+1}(s_t,a_t) = q_t(s_t,a_t)-\alpha_t(s_t,a_t) \Bigg[q_t(s_t,a_t)-[r_{t+1}+\gamma \max_{a \in A} q_t(s_{t+1},a)] \Bigg], \quad \forall (s,a) \ne (s_t,a_t)
+$$
+
+$$
 q_{t+1}(s,a)=q_t(s,a), \forall (s,a) \ne (s_t,a_t)
 $$
 
