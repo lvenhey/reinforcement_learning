@@ -90,4 +90,7 @@ $$
 
    Then we can clearly know what does Monte Carlo algorithm do? It could solve the policy improvement problem with a specfic model(model free). 
  
- * Then it comes to the Sarsa algorithm? Similarily what does it do? This algorithm estimate the action value and iteratively converges to the real action value under the current given policy. Why doing this? Because it helps in the policy improvement part as we update the q(s,a) value online!!!Thus,undoubtedly,we could combine the Sarsa algorithm with the Monte Carlo algorithm to do the policy improvement part!
+ * Then it comes to the Sarsa algorithm? Similarily what does it do? This algorithm estimate the action value and iteratively converges to the real action value under the current given policy. Why doing this? Because it helps in the policy improvement part as we update the q(s,a) value online!!!Thus,undoubtedly,we could combine the **Sarsa** algorithm with the Monte Carlo algorithm to do the policy improvement part!
+
+______
+### 2、Q-learning
