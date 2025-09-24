@@ -77,5 +77,6 @@ Then, the RM algorithm,
 
 _____
 
-
+The core task in RL is to find the optimal policies. Nearly all the algorithms are based on this task and designed for this.
+So Usually we use the policy iteration method, which includes two parts, namely the policy evaluation and policy improvement.
 
