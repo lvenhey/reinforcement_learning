@@ -36,7 +36,13 @@ $$
 d_{\pi}(s) \approx \frac{n_{\pi}(s)}{\sum_{s^{ '} \in S} n_{\pi}(s^{ '})}
 $$
 
+Meanwhile , $d_{\pi}$ can be calculated by
 
+$$
+d_{\pi}^T = d_{\pi}^T P_{\pi}
+$$
+
+where $P_{\pi}$ is from the Bellman Equation with matrix form.
 
 
 
