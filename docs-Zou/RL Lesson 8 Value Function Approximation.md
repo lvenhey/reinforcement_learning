@@ -48,10 +48,18 @@ ____
 1、The gradient-descent algorithm
 
 $$
-\omega_{k+1} = \omega_k - \alpha \gradient
+\omega_{k+1} = \omega_k - \alpha \nabla_{\omega}J(\omega_k)
 $$
 
+Note that $\omega$ is the parameter vecor used to calculate the objective function.
 
+2、Using stochastic gradient descent and TD algorithm
+
+$$
+\omega_{t+1} = \omega_t + \alpha_t [r_{t+1} + \gamma \hat_v(s_{t+1},\omega_t -\hat_v(s_t,\omega_t)] \nabla_{\omega} \hat_v (s_t,\omega_t)
+$$
+
+_____
 ### Deep Q-learning
 
 
