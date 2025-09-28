@@ -43,6 +43,16 @@ d_{\pi}^T = d_{\pi}^T P_{\pi}
 $$
 
 where $P_{\pi}$ is from the Bellman Equation with matrix form.
+____
+### How to minimize the objective function $J(\omega)$?
+1、The gradient-descent algorithm
+
+$$
+\omega_{k+1} = \omega_k - \alpha \gradient
+$$
+
+
+### Deep Q-learning
 
 
 
