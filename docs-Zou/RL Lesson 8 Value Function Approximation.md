@@ -74,5 +74,8 @@ $$
 _____
 ### Deep Q-learning
 
+The Deep Q-learning method using the approximation function and neural network is rather complicated1
+
+You have to review and have a deep research in the future!
 
 
