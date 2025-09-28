@@ -10,7 +10,10 @@ The needed data: {$(s_t,r_{t+1},s_{t+1})$} generated following the given policy 
 #### **The algorithm is:**
 
 $$
-v_{t+1}(s_t) = v_t(s_t)-\alpha_t(s_t)[v_t(s_t)-[r_{t+1}+\gamma v_t(s_{t+1})]] \\
+v_{t+1}(s_t) = v_t(s_t)-\alpha_t(s_t)[v_t(s_t)-[r_{t+1}+\gamma v_t(s_{t+1})]] 
+$$
+
+$$
 v_{t+1}(s) = v_t(s), \forall s \ne s_t
 $$
 
@@ -88,7 +91,7 @@ $$
 \pi_{k+1}(s) = arg \max_\pi \sum_a  \pi(a|s) \Bigg(\sum_r p(r|s,a)r+ \gamma \sum_{s^{'}} p(s^{'}|s,a)v_k(s^{'})\Bigg),\quad s \in S
 $$
 
-   Then we can clearly know what does Monte Carlo algorithm do? It could solve the policy improvement problem with a specfic model(model free). 
+   Then we can clearly know what does Monte Carlo algorithm do? It could solve the policy improvement problem without a specfic model(model free). 
  
  * Then it comes to the Sarsa algorithm? Similarily what does it do? This algorithm estimate the action value and iteratively converges to the real action value under the current given policy. Why doing this? Because it helps in the policy improvement part as we update the q(s,a) value online!!!Thus,undoubtedly,we could combine the **Sarsa** algorithm with the Monte Carlo algorithm to do the policy improvement part!
 
