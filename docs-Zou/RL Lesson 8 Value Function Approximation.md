@@ -56,8 +56,20 @@ Note that $\omega$ is the parameter vecor used to calculate the objective functi
 2、Using stochastic gradient descent and TD algorithm
 
 $$
-\omega_{t+1} = \omega_t + \alpha_t [r_{t+1} + \gamma \hat_v(s_{t+1},\omega_t -\hat_v(s_t,\omega_t)] \nabla_{\omega} \hat_v (s_t,\omega_t)
+\omega_{t+1} = \omega_t + \alpha_t [r_{t+1} + \gamma \hat{v}(s_{t+1},\omega_t -\hat{v}(s_t,\omega_t)] \nabla_{\omega} \hat{v}(s_t,\omega_t)
 $$
+
+3、How to select the function $\hat{v}(s,\omega)$ ?
+
+Usually use the linear form $\hat{v}(s,\omega) = \Phi^T(s) \omega $ 
+
+Then the algorithm becomes:
+
+$$
+\omega_{t+1} = \omega_t + \alpha_t [r_{t+1} + \gamma \Phi^T(s_{t+1}) \omega_t - \Phi^T(s_t)\omega_t] \Phi(s_t)
+$$
+
+
 
 _____
 ### Deep Q-learning
