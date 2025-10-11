@@ -114,9 +114,10 @@ $$
 $$
 \omega_{k+1} = \omega_k -\alpha_k (\omega_k -x_k)
 $$
+
 ​	which is exactly the mean estimation algorithm!!!!
 
-++++
+______
 
 ### 3、 Stochastic gradient descent
 
