@@ -78,4 +78,3 @@ The Deep Q-learning method using the approximation function and neural network i
 
 You have to review and have a deep research in the future!
 
-
